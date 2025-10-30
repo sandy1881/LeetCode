@@ -1,0 +1,54 @@
+-> Arraylist -> It is a resizable array ->part of Java collection Framework.
+-> It grows automatically when more elements are added.
+
+ex:  Arraylist<Integer> names = new Arraylist<>();
+                                names.add("Sandesh");
+                                names.add("Suresh");
+                                names.add("Sharath");
+
+
+-> Key features
+* Dynamic size(auto grow)
+* Maintains Insertion Order
+* Allows duplicate
+* Indexed
+* not thread safe by default.
+
+-> Declaration and Initialization
+Arraylist<Integer> list = new Arraylist<>();
+                          list.add(10);
+                          list.add(1,10);
+                          list.get(0);
+                          list.set(1,100);
+                          list.remove(0);
+                          list.size();
+                          list.contains(100);
+                          list.isEmpty();
+                          list.clear();
+
+->Internal Working
+* Internally uses an array
+* Default capacity = 10
+* when full-> creates new Array (1.5* old Array)-> copies old elements
+
+
+->Iteration
+* using for loop
+    for(int i=0;i<list.size();i++){
+        System.out.println(list.get(i));
+    }
+
+* using for each
+    `for(int i:list){
+        System.out.print(i+" ");
+    }
+
+
+*using Iterator
+    Iterator<Integer> it = new Iterator<>();
+        while(it.hasNext());
+        {
+            System.out.println(it.next);
+        }
+
+
