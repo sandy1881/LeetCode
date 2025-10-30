@@ -1,0 +1,165 @@
+Strings -> In Java String is a sequence of characters like "Hello" or "java"
+-> Strings are objects(not primitive types)
+-> They defined in Java.lang package
+-> the String class is immutable -> meaning once created, the valuecannot be changed
+ex: String name = "Sandesh";
+
+Ways to create Strings
+-> Using String literal
+    String s1="Hello";
+    String s2="Java"
+
+* stored in string constant pool(inside the heap)
+* if the same literal exsists java reuses it.
+
+-> Using new keyword
+    String s3 = new String("Hiii");
+* Always creates a new object in the heap memory even if the same literal exists in the pool.
+
+ex: String s1 = "Sandesh";
+    String s2 = "Sandesh";
+    String s3 = new String("Sandesh");
+
+    s1 == s2 -> true
+    s1 == s3 -> false
+    s1.equals(s3) -> true
+
+
+String Methods
+
+    String str = "Sandesh";
+        str.length(); -> Returns number of characters.
+
+        str.charAt(2); -> Returns characters at a position.
+
+Conact(String s) -> joins two string.
+        String str1 = "Hii";
+        String str2 = "Hello";
+        str1.concat(str2);
+
+toUpperCase() and toLowerCase()
+        String name = "Sandesh";
+        name.toUpperCase();
+        name.toLowerCase();
+
+equals()
+        String a = "A";
+        String b = "B";
+        System.out.println(a.equals(b)) -> false
+
+        String a = "A";
+        String b = "A";
+        System.out.println(a.equals(b)); -> true
+
+comapareTo()
+        String a = "A";
+        String b = "B";
+        System.out.println(a.compareTo(b)); -> -1
+
+        It returns:
+        0 → if both strings are equal
+        positive value → if str1 is greater than str2
+        negative value → if str1 is less than str2
+
+contains(Strinng sub) -> checks if String contains another string.
+`       String text = "Learning java is fun";
+        System.out.println(text.contains("java")) -> true
+
+
+startsWith() and endsEith()
+        String s = "Programming"
+        s.startsWith("Pro");
+        s.endsWith("ing"); 
+
+
+indexOf() and lastIndexOf()
+        String s = "banana";
+        s.indexOf("a"); -> 1
+        s.lastIndexOf("a"); -> 5
+
+
+subString(int begin int end)
+        String s = "Sandeshkumar H R";
+        System.out.println(s.subString(0,7)); ->Sandesh
+
+
+replace(old,new)
+        String s = "I Love Java";
+        System.out.println(s.replace("Java","Spring"));
+
+
+trim() -> Removes spaces from beginning and end.
+        String s = "     Hello World      ";
+        System.out.println(s.trim());
+
+
+split(String index) -> Splits string into array.
+        String s = "Apple,Banana,Mango";
+        String[] fruits = s.split(",");
+        System.out.println(fruits);
+
+String -> int
+        String n = "100"
+        int value = Integer.parseInt(n);
+
+
+int -> String
+        int n = 10;
+        String s = String.valueOf(n);
+
+
+String Builder
+    StringBuilder str = new StringBuilder("Sandesh");
+
+*Append
+    StringBuilder str = new StringBuilder("Sandesh");
+        str.append(" Kumar");
+        System.out.println(str); // Sandesh Kumar
+
+
+        public class BuilderExample {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.append(" World");
+        System.out.println("After append: " + sb);
+
+        sb.insert(5, ",");
+        System.out.println("After insert: " + sb);
+
+        sb.replace(0, 5, "Hi");
+        System.out.println("After replace: " + sb);
+
+        sb.delete(2, 3);
+        System.out.println("After delete: " + sb);
+
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+    }
+}
+
+
+StringBuffer
+    StringBuffer str = new StringBuffer("Sandesh");
+
+
+    public class BufferExample {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Java");
+
+        sb.append(" Programming");
+        System.out.println("After append: " + sb);
+
+        sb.insert(4, " Language");
+        System.out.println("After insert: " + sb);
+
+        sb.replace(0, 4, "Python");
+        System.out.println("After replace: " + sb);
+
+        sb.delete(0, 7);
+        System.out.println("After delete: " + sb);
+
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+    }
+}

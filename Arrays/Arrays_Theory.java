@@ -12,7 +12,7 @@
 // Array length -> arr.length;
 // multidimentional array ->  int[][] matrix = {{1,2,3},{5,6,7}}
 
-package Arrays.Arrays;
+package Arrays;
 
 public class Arrays_Theory {
     public static void main(String []args){

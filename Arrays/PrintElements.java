@@ -1,4 +1,4 @@
-package Arrays.Arrays;
+package Arrays;
 
 public class PrintElements {
         public static void main(String[] args){
