@@ -1,0 +1,45 @@
+*A HashMap in Java is part of the java.util package.
+->It stores data in key–value pairs, allowing you to:
+->Access values using their keys
+->Avoid duplicates in keys
+->Allow one null key and multiple null values
+
+ex: import java.util.HashMap;
+
+    public class Example{
+        public static void main (String args[]){
+            HashMap<Integer,String> map = new HashMap<>();
+            map.put(1,"Sandesh");
+            map.put(2,"Developer");
+            map.put(3,"Web");
+
+            System.out.println(map)
+        }
+    }
+
+
+put(key, value) — Add or Update
+    HashMap<Integer, String> map = new HashMap<>();
+    map.put(1, "Java");
+    map.put(2, "Python");
+    map.put(3, "C++");
+    System.out.println(map);
+
+
+get(key) — Retrieve Value
+    System.out.println(map.get(2)); // Spring
+    System.out.println(map.get(5)); // null (not found)
+
+remove(key) — Delete Key–Value Pair
+    map.remove(3);
+    System.out.println(map); // {1=Java, 2=Spring}
+
+containsKey(key) / containsValue(value)
+    System.out.println(map.containsKey(1));   // true
+    System.out.println(map.containsValue("Java")); // true
+
+
+System.out.println(map.size()); // 2
+System.out.println(map.isEmpty()); // false
+map.clear();
+System.out.println(map); // {}

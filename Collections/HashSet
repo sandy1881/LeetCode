@@ -1,0 +1,33 @@
+*HashSet in Java
+->HashSet is a class in Java used to store unique values only.
+->It does not allow duplicates.
+->Order is not guaranteed (not insertion order, no index like array).
+
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+
+        // adding elements
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Apple");  // duplicate
+
+        System.out.println(set);
+    }
+}
+
+
+Method	                    Meaning
+add(value)	              add element
+remove(value)	         remove element
+contains(value)	        check element exists
+size()	                number of elements
+clear()             	remove all elements
+
+
+When to use HashSet?
+->When you want unique values
+->When you dont care about order
+->When you want fast searching (contains is O(1) average)
